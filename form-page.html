@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI/UX & Acessibilidade - Formulário</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="form-page.html">Contato</a>
+    </nav>
+  </header>
+
+  <div class="layout-wrapper">
+    <main id="conteudo-principal">
+      <!-- Bloco educativo: formulários acessíveis -->
+      <section class="edu-box">
+        <h2>📝 Formulários: Boas Práticas</h2>
+        <ul>
+          <li><code>&lt;label for="id"&gt;</code> sempre associado ao campo</li>
+          <li>Erros visíveis + <code>aria-describedby</code> para leitores de tela</li>
+          <li>Alvos de toque ≥ 44×44px (<code>min-width/height</code>)</li>
+          <li>Ordem de tabulação = ordem visual (Grid auto-flow garante isso)</li>
+        </ul>
+        <p><small>Fonte: <a href="https://inclusive-components.design/forms/">Inclusive Components: Forms</a></small></p>
+      </section>
+
+      <h1>Formulário de Contato</h1>
+      <p>Preencha os campos abaixo. Todos os itens marcados com <code>*</code> são obrigatórios.</p>
+
+      <form id="contact-form" action="#" method="post">
+        <div class="form-group">
+          <label for="nome">Nome completo *</label>
+          <input type="text" id="nome" name="nome" required aria-required="true" autocomplete="name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail *</label>
+          <input type="email" id="email" name="email" required aria-required="true" autocomplete="email">
+          <span class="error-msg" id="email-error" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="assunto">Assunto</label>
+          <select id="assunto" name="assunto">
+            <option value="">Selecione uma opção</option>
+            <option value="duvida">Dúvida geral</option>
+            <option value="suporte">Suporte técnico</option>
+            <option value="parceria">Proposta de parceria</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="mensagem">Mensagem *</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required aria-required="true" placeholder="Descreva seu pedido com detalhes..."></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit">Enviar solicitação</button>
+          <button type="reset">Limpar campos</button>
+        </div>
+      </form>
+    </main>
+
+    <aside>
+      <h2>Boas Práticas em Formulários</h2>
+      <ul>
+        <li>Associe cada <code>&lt;label&gt;</code> ao seu campo via <code>for</code> e <code>id</code>.</li>
+        <li>Use tipos de input corretos para ativar teclados virtuais adequados.</li>
+        <li>Forneça feedback visual claro para erros e sucesso.</li>
+        <li>Mantenha a ordem de tabulação idêntica à ordem visual da grade.</li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer>
+    <address>
+      <p>Luis Alfredo - BFD Full Stack 2026</p>
+      <p>Contato: <a href="mailto:contato@exemplo.com">contato@exemplo.com</a></p>
+    </address>
+  </footer>
+</body>
+</html>

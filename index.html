@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI/UX & Acessibilidade - Início</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="form-page.html">Contato</a>
+    </nav>
+  </header>
+
+  <div class="layout-wrapper">
+    <main id="conteudo-principal">
+      <!-- Bloco educativo: princípios de UX -->
+      <section class="edu-box">
+        <h2>🎯 Princípios de Usabilidade (Resumo)</h2>
+        <ul>
+          <li><strong>Lei de Hick:</strong> Mais opções = mais tempo para decidir. Limite ações por tela.</li>
+          <li><strong>Lei de Jakob:</strong> Usuários preferem sites que funcionam como os que já conhecem.</li>
+          <li><strong>Heurística #8 (Nielsen):</strong> "Minimalista" ≠ vazio. Remova o irrelevante, não o útil.</li>
+        </ul>
+        <p><small>Fontes: <a href="https://lawsofux.com/">Laws of UX</a>, <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">NN/g Heuristics</a></small></p>
+      </section>
+
+      <article>
+        <h1>Fundamentos de UI/UX</h1>
+        <section>
+          <h2>Princípios de Usabilidade</h2>
+          <p>Uma interface eficaz reduz a carga cognitiva e guia o usuário de forma intuitiva. Evite escolhas desnecessárias e mantenha a consistência visual em todos os componentes.</p>
+          <figure>
+            <img src="https://placehold.co/600x300/d1fae5/065f46?text=Hierarquia+Visual" alt="Diagrama ilustrando título, subtítulo e imagem organizados em blocos">
+            <figcaption>Exemplo de hierarquia visual aplicada em layout de grade</figcaption>
+          </figure>
+        </section>
+      </article>
+
+      <!-- Bloco educativo: acessibilidade prática -->
+      <section class="edu-box">
+        <h2>♿ Acessibilidade: Checklist Mínimo</h2>
+        <ul>
+          <li>Contraste ≥ 4.5:1 para texto normal (<a href="https://webaim.org/resources/linkcontrastchecker/">verificar aqui</a>)</li>
+          <li>Todos os elementos interativos alcançáveis via <kbd>Tab</kbd></li>
+          <li><code>alt</code> descritivo em imagens informativas; <code>role="img"</code> + <code>aria-label</code> em decorativas</li>
+          <li>Hierarquia de títulos lógica: apenas um <code>&lt;h1&gt;</code>, sem pular níveis</li>
+        </ul>
+        <p><small>Fonte: <a href="https://webaim.org/standards/wcag/quickref/">WCAG Quick Reference</a></small></p>
+      </section>
+
+      <article>
+        <h2>Acessibilidade na Prática</h2>
+        <p>Acessibilidade não é um recurso extra, é uma base técnica. Utilize HTML semântico, garanta contraste mínimo de 4.5:1 e permita navegação completa por teclado.</p>
+        <ul>
+          <li>Use <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code> e <code>&lt;footer&gt;</code> corretamente.</li>
+          <li>Mantenha a hierarquia de títulos lógica e sem saltos.</li>
+          <li>Teste o fluxo de tabulação antes de qualquer lançamento.</li>
+        </ul>
+      </article>
+    </main>
+
+    <aside>
+      <h2>Recursos Recomendados</h2>
+      <ul>
+        <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">Guia Completo de CSS Grid - CSS Tricks</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout">Documentação CSS Grid - MDN</a></li>
+        <li><a href="https://www.nngroup.com/articles/ten-usability-heuristics/">10 Heurísticas de Nielsen</a></li>
+        <li><a href="https://webaim.org/resources/linkcontrastchecker/">Checagem de contraste WCAG</a></li>
+        <li><a href="https://validator.w3.org/">Validador W3C HTML</a></li>
+        <li><a href="https://jigsaw.w3.org/css-validator/">Validador W3C CSS</a></li>
+      </ul>
+      <div class="info-box">
+        <h3>Dica do Dia</h3>
+        <p>CSS Grid substitui hacks antigos. Use <code>gap</code> e <code>minmax()</code> para layouts responsivos sem depender de múltiplas media queries.</p>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    <address>
+      <p>Luis Alfredo - BFD Full Stack 2026</p>
+      <p>Contato: <a href="mailto:contato@exemplo.com">contato@exemplo.com</a></p>
+    </address>
+  </footer>
+</body>
+</html>

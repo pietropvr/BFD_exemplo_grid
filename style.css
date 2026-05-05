@@ -1,0 +1,46 @@
+/* =========================================
+   BASE RESET & VARIÁVEIS (Comum a ambos os dias)
+   ========================================= */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Cores teal com contraste AA garantido */
+  --cor-texto: #1f2937;
+  --cor-fundo: #f9fafb;
+  --cor-fundo-card: #ffffff;
+  --cor-primaria: #0d9488;
+  --cor-primaria-hover: #0f766e;
+  --cor-borda: #9ca3af;
+  --cor-erro: #b91c1c;
+  --cor-foco: #0891b2;
+
+  /* Escala de espaçamento em PX (previsível, debug-friendly) */
+  --espaco-xs: 4px;
+  --espaco-sm: 8px;
+  --espaco-md: 16px;
+  --espaco-lg: 24px;
+  --espaco-xl: 40px;
+
+  /* Tipografia: rem apenas para font-size (escala com configurações do usuário) */
+  --fonte-principal: system-ui, -apple-system, sans-serif;
+  --tam-base: 1rem;     /* 16px */
+  --tam-h1: 2rem;       /* 32px */
+  --tam-h2: 1.5rem;     /* 24px */
+  --tam-small: 0.875rem; /* 14px */
+}
+
+html {
+  font-size: 100%; /* Mantém 16px base */
+}
+
+body {
+  font-family: var(--fonte-principal);
+  font-size: var(--tam-base);
+  line-height: 1.6;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  margin: 0;
+  padding: 0;
+}
