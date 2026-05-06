@@ -44,3 +44,63 @@ body {
   margin: 0;
   padding: 0;
 }
+
+
+header {
+  background-color: var(--cor-primaria);
+  padding: var(--espaco-xs);
+}
+
+nav a, footer a {
+  color: white;
+  text-decoration: none;
+  padding: var(--espaco-sm);
+}
+
+.layout-wrapper {
+  display: grid;
+  align-items: start;
+  grid-template-columns: 1fr;
+  gap: var(--espaco-lg);
+  max-width: 1200px;
+  margin: auto;
+  padding: var(--espaco-md);
+}
+
+article, aside, .edu-box {
+  background: var(--cor-fundo-card);
+  padding: var(--espaco-md);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  margin-bottom: var(--espaco-md);
+}
+
+.info-box {
+  border-left: 4px solid var(--cor-primaria);
+  background: #f0fdfa;
+  padding: var(--espaco-sm);
+}
+
+a {
+  color: var(--cor-primaria-hover);
+}
+
+footer {
+  background-color: var(--cor-texto);
+  color: var(--cor-fundo);
+  text-align: center;
+  padding: var(--espaco-sm);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--cor-primaria-hover);
+}
+
+@media  screen and (min-width: 768px) {
+  .layout-wrapper{
+    grid-template-columns: 2fr, 1fr;
+  }
+
+}
