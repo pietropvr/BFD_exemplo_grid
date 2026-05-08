@@ -98,9 +98,57 @@ img {
   border: 1px solid var(--cor-primaria-hover);
 }
 
+.form-group {
+  margin-bottom: var(--espaco-sm);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+}
+
+label {
+  /* text-align: right; */
+  justify-self: end;
+  align-self: center;
+}
+
+input, select, textarea {
+  border: 2px solid var(--cor-borda);
+  border-radius: 6px;
+  padding: var(--espaco-md) ; 
+}
+
+/* Exibe estilo de campo inválido apenas após o usuário escrever no campo */
+input:user-invalid {
+  border: 2px solid red;
+  background: #ffefe6;
+}
+
+/* Adicione pseudoclasses para o foco do mouse e do teclado */
+#contact-form-focus-within {
+  background: var(--cor-foco);
+}
+
+.form-actions {
+  display: grid;
+  grid-auto-flow: column;
+  gap: var(--espaco-sm);
+}
+
+/* Estilizar */
+button {
+
+
+}
+
+
 @media  screen and (min-width: 768px) {
+
   .layout-wrapper{
-    grid-template-columns: 2fr, 1fr;
+    grid-template-columns: 2fr, 240px;
   }
 
+}
+
+body {
+  background-color: #e3eef0;
 }
